@@ -140,6 +140,111 @@ sqlmap -u "https://juice-shop.herokuapp.com/rest/products/search?q=test" --level
    - ¿Por qué es peligrosa una entrada como `' OR 1=1 --`?
    - ¿Cómo se puede prevenir desde el lado del servidor?
 
+---
+---
+
+# Laboratorio Semana 6.1 – Pentesting Asistido por Kali GPT (ChatGPT Público)
+
+**Curso:** CY‑203 Hackeo Ético  
+**Semana:** 6.1  
+**Duración:** 2 horas  
+**Objetivo general:** Usar el agente gratuito [Kali GPT en ChatGPT](https://chatgpt.com/g/g-uRhIB5ire-kali-gpt) para asistir en tareas de enumeración, escaneo y pruebas de seguridad web sobre OWASP Juice Shop - (CY-203 Hackeo Ético)
+
+---
+
+## Objetivos específicos
+
+1. Ejecutar cada fase del pentesting con apoyo de IA.  
+2. Aprender a documentar y ajustar resultados con el agente de IA.  
+3. Utilizar el prompt estándar para guiar el análisis.  
+4. Reflexionar sobre cómo la IA mejora, guía o limita una estrategia ética.
+
+---
+
+##  Herramienta usada: Kali GPT (OpenAI ChatGPT)
+
+**Acceso gratuito:**  
+ [https://chatgpt.com/g/g-uRhIB5ire-kali-gpt](https://chatgpt.com/g/g-uRhIB5ire-kali-gpt)
+
+**Prompt estándar a usar:**
+
+```
+Let's do a guide for the following web site: https://juice-shop.herokuapp.com
+
+The guide should consist of the following parts:
+1- Target Recon & Intelligence Gathering
+2 - Vulnerability Scanning
+3- Web Application Security
+
+Enumerate each step so that I can paste the results and you can re-structure the strategy for better results
+```
+
+---
+
+## Guía del laboratorio con IA
+
+### 1. Target Recon & Intelligence Gathering
+
+**Manual:**
+```bash
+whois juice-shop.herokuapp.com
+curl -I https://juice-shop.herokuapp.com
+```
+
+**Con IA:**
+- Preguntar al agente qué herramientas usar para hacer reconocimiento pasivo.
+- Copiar resultados de `whois` y pedir análisis del registrante, DNS, etc.
+- Pedir interpretación de headers HTTP.
+
+---
+
+### 2. Vulnerability Scanning
+
+**Manual:**
+```bash
+nmap -Pn -p 443 juice-shop.herokuapp.com
+gobuster dir -u https://juice-shop.herokuapp.com -w /usr/share/wordlists/dirb/common.txt -k
+```
+
+**Con IA:**
+- Preguntar: "What ports should I scan on a Heroku-hosted app?"
+- Pedir análisis de rutas descubiertas por `gobuster`.
+- Preguntar si `/rest` o `/admin` pueden ser interesantes.
+
+---
+
+### 3. Web Application Security (SQLi)
+
+**Manual:**
+```bash
+curl "https://juice-shop.herokuapp.com/rest/products/search?q=' OR 1=1 --"
+```
+
+**Con IA:**
+- Preguntar: "What are common injection points in Juice Shop?"
+- Solicitar análisis del parámetro `q` y sugerencia de payloads SQLi.
+- Pedir explicación sobre la respuesta JSON para confirmar vulnerabilidad.
+
+---
+
+## Entregables
+
+1. Capturas de pantalla de conversación con Kali GPT  
+2. Comparación entre ejecución manual y sugerida  
+3. Informe con:
+   - Fases de ataque
+   - Herramientas usadas
+   - Resultados interpretados por la IA  
+4. Reflexión:
+   - ¿Te ayudó a entender mejor los pasos?
+   - ¿Detectó la IA algo que no habías considerado?
+   - ¿Qué pasos requieren validación humana?
+
+---
+
+## Conclusión
+
+Kali GPT acelera tareas, guía estrategias y educa con ejemplos claros. Sin embargo, el pentester debe confirmar, validar y decidir qué acciones ejecutar. La IA no reemplaza la responsabilidad profesional.
 
 ---
 
