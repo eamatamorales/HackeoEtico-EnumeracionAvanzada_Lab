@@ -4,7 +4,7 @@
 
 **Curso**: CY-203 Hackeo Ético  
 **Semana**: 6  
-**Duración**: 2 horas  
+**Duración**: 45 min  
 **Objetivo general**: Aplicar técnicas de enumeración contra el entorno vulnerable público de OWASP Juice Shop, reconociendo rutas, servicios y posibles puntos de ataque.
 
 ---
@@ -143,11 +143,11 @@ sqlmap -u "https://juice-shop.herokuapp.com/rest/products/search?q=test" --level
 ---
 ---
 
-# Laboratorio Semana 6.1 – Pentesting Asistido por Kali GPT (ChatGPT Público)
+# Laboratorio Semana 5.1 – Pentesting Asistido por Kali GPT (ChatGPT Público)
 
 **Curso:** CY‑203 Hackeo Ético  
-**Semana:** 6.1  
-**Duración:** 2 horas  
+**Semana:** 5.1  
+**Duración:** 45 min  
 **Objetivo general:** Usar el agente gratuito [Kali GPT en ChatGPT](https://chatgpt.com/g/g-uRhIB5ire-kali-gpt) para asistir en tareas de enumeración, escaneo y pruebas de seguridad web sobre OWASP Juice Shop - (CY-203 Hackeo Ético)
 
 ---
