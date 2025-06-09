@@ -1,9 +1,9 @@
 
-# Laboratorio Semana 6 – Enumeración Avanzada sobre OWASP Juice Shop (Online) - (CY-203 Hackeo Ético)
+# Laboratorio Semana 5 – Enumeración Avanzada sobre OWASP Juice Shop (Online) - (CY-203 Hackeo Ético)
 
 
 **Curso**: CY-203 Hackeo Ético  
-**Semana**: 6  
+**Semana**: 5  
 **Duración**: 45 min  
 **Objetivo general**: Aplicar técnicas de enumeración contra el entorno vulnerable público de OWASP Juice Shop, reconociendo rutas, servicios y posibles puntos de ataque.
 
